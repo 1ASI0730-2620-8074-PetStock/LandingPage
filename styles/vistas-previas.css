@@ -1,0 +1,105 @@
+/* ==========================================================================
+   SECCIÓN: Vistas previas (PetStock en acción)
+   Fondo oscuro con texto + 3 capturas de la app superpuestas en abanico.
+   ========================================================================== */
+
+#vistas-previas {
+  background-color: var(--color-marron-oscuro);
+  padding-block: var(--sp-6);
+  overflow: hidden; /* evita scroll horizontal por las imágenes rotadas */
+}
+
+.vistas-previas__contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--sp-5);
+}
+
+/* texto columna izquierda */
+.vistas-previas__etiqueta {
+  color: var(--color-naranja);
+  font-family: var(--fuente-titulos);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-2);
+}
+
+.vistas-previas__texto h2 {
+  color: var(--color-crema);
+}
+
+.vistas-previas__texto p {
+  color: var(--color-beige);
+}
+
+.vistas-previas__lista li {
+  color: var(--color-crema);
+  margin-bottom: var(--sp-1);
+}
+
+.vistas-previas__lista li::before {
+  content: "— ";
+  color: var(--color-naranja);
+}
+
+/* Columna derecha: contenedor de las 3 capturas en abanico */
+.vistas-previas__imagenes {
+  position: relative;
+  min-height: 560px;
+}
+
+.imagen-flotante {
+  position: absolute;
+  width: clamp(150px, 20vw, 200px);
+  border-radius: var(--radio-borde);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.imagen-flotante--atras {
+  top: 0;
+  left: 0;
+  transform: rotate(-8deg);
+  z-index: 1;
+}
+
+.imagen-flotante--lado {
+  top: 30px;
+  right: 0;
+  transform: rotate(8deg);
+  z-index: 1;
+}
+
+.imagen-flotante--frente {
+  top: 70px;
+  left: 50%;
+  width: clamp(170px, 24vw, 230px);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .vistas-previas__contenido {
+    grid-template-columns: 1fr;
+  }
+
+  .vistas-previas__imagenes {
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    gap: var(--sp-2);
+  }
+
+  .imagen-flotante {
+    position: static;
+    transform: none;
+    width: 45%;
+  }
+
+  .imagen-flotante--frente {
+    width: 50%;
+  }
+}
