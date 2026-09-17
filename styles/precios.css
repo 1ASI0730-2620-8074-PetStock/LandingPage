@@ -1,0 +1,84 @@
+/* ==========================================================================
+   PRECIOS — Plan de suscripción de PetStock
+   ========================================================================== */
+
+#precios {
+  background-color: var(--color-fondo);
+  padding-block: var(--sp-6);
+  text-align: center;
+}
+
+.precios__encabezado {
+  margin-bottom: var(--sp-5);
+}
+
+.precios__encabezado p {
+  margin-inline: auto;
+}
+
+.precios__card {
+  background-color: var(--color-fondo-alterno);
+  border-radius: var(--radio-borde);
+  padding: var(--sp-4);
+  max-width: 360px;
+  margin-inline: auto;
+}
+
+.precios__monto {
+  font-family: var(--fuente-titulos);
+  color: var(--color-primario);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.precios__monto span {
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--color-texto);
+}
+
+.precios__subtitulo {
+  font-style: italic;
+  color: var(--color-texto-suave);
+  margin-bottom: var(--sp-3);
+}
+
+.precios__lista {
+  text-align: left;
+  margin-bottom: var(--sp-3);
+}
+
+.precios__lista li {
+  padding-block: var(--sp-1);
+  color: var(--color-texto);
+  font-size: var(--fs-small);
+}
+
+.precios__lista li::before {
+  content: "✓ ";
+  color: var(--color-primario);
+  font-weight: 700;
+}
+
+.precios__boton {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radio-borde-chico);
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  width: 100%;
+  transition: background-color var(--transicion);
+}
+
+.precios__boton:hover {
+  background-color: var(--color-primario-hover);
+}
+
+.precios__nota {
+  font-size: 0.75rem;
+  color: var(--color-texto-suave);
+  margin-top: var(--sp-2);
+  margin-bottom: 0;
+}
