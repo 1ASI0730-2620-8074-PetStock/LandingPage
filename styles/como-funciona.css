@@ -1,0 +1,56 @@
+/* ==========================================================================
+   COMO FUNCIONA — Pasos de uso de PetStock
+   ========================================================================== */
+
+#como-funciona {
+  background-color: var(--color-fondo-alterno);
+  padding-block: var(--sp-6);
+}
+
+.como-funciona__encabezado {
+  text-align: center;
+  margin-bottom: var(--sp-5);
+}
+
+.como-funciona__encabezado p {
+  margin-inline: auto;
+}
+
+.como-funciona__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--sp-3);
+}
+
+.paso {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: var(--sp-3);
+  text-align: center;
+}
+
+.paso__numero {
+  background-color: var(--color-beige);
+  color: var(--color-primario);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0 auto var(--sp-2);
+}
+
+.paso h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: var(--sp-1);
+}
+
+.paso p {
+  font-size: var(--fs-small);
+  margin: 0 auto;
+}
