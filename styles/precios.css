@@ -38,12 +38,6 @@
   color: var(--color-texto);
 }
 
-.precios__subtitulo {
-  font-style: italic;
-  color: var(--color-texto-suave);
-  margin-bottom: var(--sp-3);
-}
-
 .precios__lista {
   text-align: left;
   margin-bottom: var(--sp-3);
