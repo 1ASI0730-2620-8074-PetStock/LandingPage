@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="styles/como-funciona.css">
   <link rel="stylesheet" href="styles/precios.css">
    <link rel="stylesheet" href="styles/vistas-previas.css">
+    <link rel="stylesheet" href="styles/faq.css">
+     <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
 
@@ -176,9 +178,101 @@
     </div>
   </section>
 
-  <!-- PERSONA 5: FAQ y Footer -->
-  <section id="faq"> ... </section>
-  <footer> ... </footer>
+ <!--faq-->
+ <section id="faq">
+    <div class="faq__contenedor">
+      <p class="faq__sobretitulo">PREGUNTAS FRECUENTES</p>
+      <h2 class="faq__titulo">Respuestas antes de empezar.</h2>
+      
+      <div class="faq__lista">
+        <!-- pregunta 1 -->
+        <div class="faq__item">
+          <div class="faq__pregunta-header">
+            <h3 class="faq__pregunta">¿PetStock funciona desde el celular?</h3>
+            <span class="faq__icono">+</span>
+          </div>
+          <div class="faq__respuesta">
+            <p>Sí, PetStock es una plataforma web. Puedes acceder a tu cuenta desde el navegador de tu celular, tablet o computadora de forma cómoda y sin necesidad de instalar nada extra.</p>
+          </div>
+        </div>
+
+        <!-- pregunta 2 -->
+        <div class="faq__item">
+          <div class="faq__pregunta-header">
+            <h3 class="faq__pregunta">¿Puedo registrar productos con stock mínimo?</h3>
+            <span class="faq__icono">+</span>
+          </div>
+          <div class="faq__respuesta">
+            <p>¡Por supuesto! Al registrar tus productos puedes definir un nivel de stock mínimo. El sistema te alertará a tiempo cuando las existencias bajen de ese límite para evitar que te quedes sin productos.</p>
+          </div>
+        </div>
+
+        <!-- pregunta 3 -->
+        <div class="faq__item">
+          <div class="faq__pregunta-header">
+            <h3 class="faq__pregunta">¿Puedo revisar las compras de mis clientes?</h3>
+            <span class="faq__icono">+</span>
+          </div>
+          <div class="faq__respuesta">
+            <p>Sí, PetStock guarda un historial completo de tus ventas. Podrás consultar la información de tus clientes y sus compras anteriores para mantener todo organizado y tomar decisiones con datos.</p>
+          </div>
+        </div>
+
+        <!-- pregunta 4 -->
+        <div class="faq__item">
+          <div class="faq__pregunta-header">
+            <h3 class="faq__pregunta">¿Necesito conocimientos técnicos para usar PetStock?</h3>
+            <span class="faq__icono">+</span>
+          </div>
+          <div class="faq__respuesta">
+            <p>Para nada. Hemos diseñado la interfaz con colores claros y tipografías legibles para que administrar tu tienda sea muy intuitivo. Es la herramienta ideal para quienes buscan simplicidad en su día a día.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!--footer-->
+  <footer class="footer">
+    <div class="footer__contenedor">
+      
+      <div class="footer__marca">
+        <h2 class="footer__logo">PetStock</h2>
+        <p class="footer__eslogan">Gestión simple para tiendas de mascotas.</p>
+      </div>
+
+      <div class="footer__enlaces">
+        <ul class="footer__lista">
+          <li><a href="#">Términos y condiciones</a></li>
+          <li><a href="#">Centro de ayuda</a></li>
+        </ul>
+        <ul class="footer__lista">
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Correo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__copyright">
+        <p>© 2026 PetStock</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const preguntas = document.querySelectorAll('.faq__pregunta-header');
+    preguntas.forEach(pregunta => {
+      pregunta.addEventListener('click', () => {
+        const itemActivo = pregunta.parentElement;
+        document.querySelectorAll('.faq__item').forEach(item => {
+          if (item !== itemActivo) {
+            item.classList.remove('activo');
+          }
+        });
+
+        itemActivo.classList.toggle('activo');
+      });
+    });
+  </script>
 
 </body>
 </html>
