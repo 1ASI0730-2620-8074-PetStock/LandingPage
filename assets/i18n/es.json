@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "beneficios": "Beneficios",
+    "comoFunciona": "Cómo funciona",
+    "precios": "Precios",
+    "faq": "FAQ",
+    "join": "Unirse"
+  },
+  "hero": {
+    "title": "Controla tu tienda de mascotas sin enredos",
+    "subtitle": "El inventario, las ventas y las alertas de stock mínimo organizadas en un solo lugar de forma simple y rápida.",
+    "cta": "Empieza gratis 14 días"
+  },
+  "beneficios": {
+    "title": "Beneficios de usar PetStock",
+    "subtitle": "Todo lo que necesitas para llevar el control de tu tienda, sin complicarte.",
+    "b1_title": "Inventario bajo control",
+    "b1_desc": "Conoce tus existencias en todo momento.",
+    "b2_title": "Alertas inteligentes",
+    "b2_desc": "Detecta productos con stock bajo a tiempo.",
+    "b3_title": "Ventas más simples",
+    "b3_desc": "Registra tus ventas de manera rápida y sencilla.",
+    "b4_title": "Decisiones con datos",
+    "b4_desc": "Identifica productos de mayor y menor movimiento.",
+    "b5_title": "Clientes organizados",
+    "b5_desc": "Consulta información e historial de compras.",
+    "b6_title": "Más tiempo para tu negocio",
+    "b6_desc": "Reduce tareas manuales y mantén todo centralizado."
+  },
+  "comoFunciona": {
+    "title": "Así de simple es tomar el control de tu tienda",
+    "subtitle": "Simple, rápido y sin errores.",
+    "p1_title": "Regístrate",
+    "p1_desc": "Crea tu cuenta en minutos y configura los datos de tu tienda.",
+    "p2_title": "Carga tu catálogo",
+    "p2_desc": "Registra tus productos y define tu stock mínimo.",
+    "p3_title": "Vende y controla tu inventario",
+    "p3_desc": "Registra tus ventas. El stock se actualiza solo.",
+    "p4_title": "Recibe alertas a tiempo",
+    "p4_desc": "Te avisamos antes de que algo se agote.",
+    "p5_title": "Toma mejores decisiones",
+    "p5_desc": "Consulta tus reportes cuando los necesites."
+  },
+  "precios": {
+    "title": "Un plan simple, pensado para tu tienda",
+    "subtitle": "Todo incluido, siempre.",
+    "period": "/ mes",
+    "f1": "Gestión ilimitada de productos e inventario",
+    "f2": "Registro de ventas y compras",
+    "f3": "Alertas automáticas de stock mínimo",
+    "f4": "Cierre y cuadre de caja diario",
+    "f5": "Reportes y exportación en PDF",
+    "f6": "Soporte por correo electrónico",
+    "cta": "Empieza gratis 14 días",
+    "note": "Sin tarjeta de crédito · Cancela cuando quieras"
+  },
+  "vistasPrevias": {
+    "title": "Información clara para actuar en el momento.",
+    "desc": "Desde el Dashboard puedes revisar alertas, registrar ventas y consultar el estado de tu tienda sin saltar entre cuadernos.",
+    "l1": "Acciones rápidas",
+    "l2": "Alertas de stock",
+    "l3": "Registro de ventas"
+  },
+  "faq": {
+    "tag": "PREGUNTAS FRECUENTES",
+    "title": "Respuestas antes de empezar.",
+    "q1": "¿PetStock funciona desde el celular?",
+    "a1": "Sí, PetStock es una plataforma web. Puedes acceder a tu cuenta desde el navegador de tu celular, tablet o computadora de forma cómoda y sin necesidad de instalar nada extra.",
+    "q2": "¿Puedo registrar productos con stock mínimo?",
+    "a2": "¡Por supuesto! Al registrar tus productos puedes definir un nivel de stock mínimo. El sistema te alertará a tiempo cuando las existencias bajen de ese límite para evitar que te quedes sin productos.",
+    "q3": "¿Puedo revisar las compras de mis clientes?",
+    "a3": "Sí, PetStock guarda un historial completo de tus ventas. Podrás consultar la información de tus clientes y sus compras anteriores para mantener todo organizado y tomar decisiones con datos.",
+    "q4": "¿Necesito conocimientos técnicos para usar PetStock?",
+    "a4": "Para nada. Hemos diseñado la interfaz con colores claros y tipografías legibles para que administrar tu tienda sea muy intuitivo. Es la herramienta ideal para quienes buscan simplicidad en su día a día."
+  },
+  "footer": {
+    "brand": "PetStock",
+    "slogan": "Gestión simple para tiendas de mascotas.",
+    "terms": "Términos y condiciones",
+    "help": "Centro de ayuda",
+    "privacy": "Política de privacidad",
+    "email": "Correo",
+    "copyright": "© 2026 PetStock"
+  }
+}

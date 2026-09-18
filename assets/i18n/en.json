@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "beneficios": "Benefits",
+    "comoFunciona": "How it works",
+    "precios": "Pricing",
+    "faq": "FAQ",
+    "join": "Join"
+  },
+  "hero": {
+    "title": "Manage your pet shop without hassle",
+    "subtitle": "Inventory, sales, and low stock alerts organized in one single place simply and quickly.",
+    "cta": "Start free for 14 days"
+  },
+  "beneficios": {
+    "title": "Benefits of using PetStock",
+    "subtitle": "Everything you need to manage your store without complications.",
+    "b1_title": "Inventory under control",
+    "b1_desc": "Know your stock levels at all times.",
+    "b2_title": "Smart alerts",
+    "b2_desc": "Detect low stock products on time.",
+    "b3_title": "Simpler sales",
+    "b3_desc": "Register your sales quickly and easily.",
+    "b4_title": "Data-driven decisions",
+    "b4_desc": "Identify your top and lowest moving products.",
+    "b5_title": "Organized customers",
+    "b5_desc": "Check information and purchase history.",
+    "b6_title": "More time for your business",
+    "b6_desc": "Reduce manual tasks and keep everything centralized."
+  },
+  "comoFunciona": {
+    "title": "Taking control of your store is this simple",
+    "subtitle": "Simple, fast, and error-free.",
+    "p1_title": "Sign up",
+    "p1_desc": "Create your account in minutes and set up your store details.",
+    "p2_title": "Upload your catalog",
+    "p2_desc": "Register your products and set your minimum stock.",
+    "p3_title": "Sell and track inventory",
+    "p3_desc": "Record your sales. Stock updates automatically.",
+    "p4_title": "Receive timely alerts",
+    "p4_desc": "We notify you before anything runs out.",
+    "p5_title": "Make better decisions",
+    "p5_desc": "Check your reports whenever you need them."
+  },
+  "precios": {
+    "title": "A simple plan designed for your store",
+    "subtitle": "All inclusive, always.",
+    "period": "/ mo",
+    "f1": "Unlimited product and inventory management",
+    "f2": "Sales and purchases tracking",
+    "f3": "Automatic minimum stock alerts",
+    "f4": "Daily cash register closing",
+    "f5": "Reports and PDF export",
+    "f6": "Email support",
+    "cta": "Start free for 14 days",
+    "note": "No credit card required · Cancel anytime"
+  },
+  "vistasPrevias": {
+    "title": "Clear information to act on the spot.",
+    "desc": "From the Dashboard you can review alerts, record sales, and check your store status without flipping through notebooks.",
+    "l1": "Quick actions",
+    "l2": "Stock alerts",
+    "l3": "Sales tracking"
+  },
+  "faq": {
+    "tag": "FREQUENTLY ASKED QUESTIONS",
+    "title": "Answers before you start.",
+    "q1": "Does PetStock work on mobile phones?",
+    "a1": "Yes, PetStock is a web platform. You can access your account from your mobile, tablet, or computer browser comfortably without installing anything extra.",
+    "q2": "Can I register products with minimum stock alerts?",
+    "a2": "Of course! When registering products, you can set a minimum stock level. The system will alert you on time when inventory drops below that threshold.",
+    "q3": "Can I check my customers' purchase history?",
+    "a3": "Yes, PetStock keeps a complete sales history. You can look up customer info and past purchases to keep everything organized and make data-driven decisions.",
+    "q4": "Do I need technical skills to use PetStock?",
+    "a4": "Not at all. We designed the interface with clear colors and readable fonts to make store management very intuitive."
+  },
+  "footer": {
+    "brand": "PetStock",
+    "slogan": "Simple management for pet shops.",
+    "terms": "Terms and conditions",
+    "help": "Help center",
+    "privacy": "Privacy policy",
+    "email": "Email",
+    "copyright": "© 2026 PetStock"
+  }
+}
