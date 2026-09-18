@@ -5,259 +5,274 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PetStock</title>
   <link rel="stylesheet" href="styles/general.css">
-   <link rel="stylesheet" href="styles/beneficios.css">
+  <link rel="stylesheet" href="styles/beneficios.css">
   <link rel="stylesheet" href="styles/como-funciona.css">
   <link rel="stylesheet" href="styles/precios.css">
-   <link rel="stylesheet" href="styles/vistas-previas.css">
-    <link rel="stylesheet" href="styles/faq.css">
-     <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/vistas-previas.css">
+  <link rel="stylesheet" href="styles/faq.css">
+  <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
 
-  <!-- PERSONA 1: Navbar y Hero -->
-  <header> ... </header>
-  <section id="hero"> ... </section>
+  <!-- ELEMENTO DE ACCESIBILIDAD PARA EL LECTOR DE PANTALLA -->
+  <div id="lang-announcer" role="status" aria-live="polite" class="visually-hidden"></div>
 
-  <!-- PERSONA 2: Beneficios -->
+  <!-- NAVBAR ESTILO MODERNO -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation" style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background: rgba(47, 32, 25, 0.95); border-bottom: 1px solid rgba(255, 255, 255, 0.15);">
+
+      <!-- Logo y nombre -->
+      <a href="#hero" class="nav-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.15em; text-transform: uppercase;">PetStock</span>
+      </a>
+
+      <!-- Enlaces centrales del Navbar con data-i18n -->
+      <div class="nav-collapse" style="display: flex; gap: 30px;">
+          <ul style="list-style: none; display: flex; gap: 28px; margin: 0; padding: 0;">
+              <li><a href="#beneficios" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px;" data-i18n="nav.beneficios">Beneficios</a></li>
+              <li><a href="#como-funciona" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px;" data-i18n="nav.comoFunciona">Cómo funciona</a></li>
+              <li><a href="#precios" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px;" data-i18n="nav.precios">Precios</a></li>
+              <li><a href="#faq" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px;" data-i18n="nav.faq">FAQ</a></li>
+          </ul>
+      </div>
+
+      <!-- Acciones derechas: Selector de idioma funcional y Botón Unirse -->
+      <div style="display: flex; align-items: center; gap: 14px;">
+          <!-- Botón de Idioma con los IDs exactos que lee i18n.js -->
+          <button
+              class="lang-toggle"
+              onclick="toggleLanguage()"
+              aria-label="Switch to English"
+              id="lang-toggle-btn"
+              style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; background: transparent; cursor: pointer; color: #fff;"
+          >
+              <span class="lang-code" id="lang-code" aria-hidden="true" style="font-size: 12px; font-weight: 600;">ES</span>
+              <span class="lang-flag-pill" id="lang-flag" aria-hidden="true" style="font-size: 13px;">🇵🇪</span>
+          </button>
+
+          <!-- Botón de acción -->
+          <a href="#precios" class="btn-join" style="padding: 10px 18px; border-radius: 999px; background: #ED6B15; color: #fff; font-size: 12px; font-weight: 600; text-decoration: none;" data-i18n="nav.join">Unirse</a>
+      </div>
+  </nav>
+
+  <!-- SECCIÓN HERO -->
+  <section id="hero" style="padding: 140px 2rem 80px 2rem; text-align: center; background-color: var(--color-fondo-alterno);">
+    <div class="contenedor">
+      <h2 style="font-size: var(--fs-h1); color: var(--color-texto); margin-bottom: 1rem;" data-i18n="hero.title">Controla tu tienda de mascotas sin enredos</h2>
+      <p style="font-size: 1.2rem; color: var(--color-texto-suave); max-width: 600px; margin: 0 auto 2rem;" data-i18n="hero.subtitle">El inventario, las ventas y las alertas de stock mínimo organizadas en un solo lugar de forma simple y rápida.</p>
+      <a href="#precios" style="display: inline-block; background-color: var(--color-primario); color: var(--color-blanco); padding: 14px 28px; border-radius: var(--radio-borde-chico); font-weight: 600; text-decoration: none;" data-i18n="hero.cta">Empieza gratis 14 días</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN BENEFICIOS (Mejorada con copys más comerciales) -->
   <section id="beneficios">
     <div class="contenedor">
-     <div class="beneficios__encabezado">
-      <h2>Beneficios de usar PetStock</h2>
-      <p>Todo lo que necesitas para llevar el control de tu tienda, sin complicarte.</p>
-    </div>
-    <div class="beneficios__grid">
+      <div class="beneficios__encabezado">
+        <h2 data-i18n="beneficios.title">Todo lo que tu veterinaria o tienda necesita para crecer</h2>
+        <p data-i18n="beneficios.subtitle">Olvídese de los cuadernos y elimine las pérdidas por falta de stock.</p>
+      </div>
+      <div class="beneficios__grid">
         <div class="beneficio">
-        <div class="beneficio__icono">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 8L12 3 3 8v8l9 5 9-5V8Z"/>
-            <path d="M3 8l9 5 9-5"/>
-            <path d="M12 13v8"/>
-          </svg>
+          <div class="beneficio__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8L12 3 3 8v8l9 5 9-5V8Z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg>
+          </div>
+          <h3 data-i18n="beneficios.b1_title">Inventario bajo control</h3>
+          <p data-i18n="beneficios.b1_desc">Conoce tus existencias en todo momento.</p>
         </div>
-        <h3>Inventario bajo control</h3>
-        <p>Conoce tus existencias en todo momento.</p>
+        <div class="beneficio">
+          <div class="beneficio__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a5 5 0 0 0-5 5c0 5-2 6-2 7h14c0-1-2-2-2-7a5 5 0 0 0-5-5Z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>
+          </div>
+          <h3 data-i18n="beneficios.b2_title">Alertas inteligentes</h3>
+          <p data-i18n="beneficios.b2_desc">Detecta productos con stock bajo a tiempo.</p>
+        </div>
+        <div class="beneficio">
+          <div class="beneficio__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/><path d="M2 3h3l2.2 11.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+          </div>
+          <h3 data-i18n="beneficios.b3_title">Ventas más simples</h3>
+          <p data-i18n="beneficios.b3_desc">Registra tus ventas de manera rápida y sencilla.</p>
+        </div>
+        <div class="beneficio">
+          <div class="beneficio__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M11 20V4"/><path d="M18 20v-7"/></svg>
+          </div>
+          <h3 data-i18n="beneficios.b4_title">Decisiones con datos</h3>
+          <p data-i18n="beneficios.b4_desc">Identifica productos de mayor y menor movimiento.</p>
+        </div>
+        <div class="beneficio">
+          <div class="beneficio__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5"/><path d="M16 8.2a3 3 0 1 1 3.6 3"/><path d="M15.5 13.7c2.4.4 4.2 2.4 4.2 5.3"/></svg>
+          </div>
+          <h3 data-i18n="beneficios.b5_title">Clientes organizados</h3>
+          <p data-i18n="beneficios.b5_desc">Consulta información e historial de compras.</p>
+        </div>
+        <div class="beneficio">
+          <div class="beneficio__icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+          </div>
+          <h3 data-i18n="beneficios.b6_title">Más tiempo para tu negocio</h3>
+          <p data-i18n="beneficios.b6_desc">Reduce tareas manuales y mantén todo centralizado.</p>
+        </div>
+      </div>
     </div>
-    <div class="beneficio">
-        <div class="beneficio__icono">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a5 5 0 0 0-5 5c0 5-2 6-2 7h14c0-1-2-2-2-7a5 5 0 0 0-5-5Z"/>
-            <path d="M10 19a2 2 0 0 0 4 0"/>
-          </svg>
-        </div>
-        <h3>Alertas inteligentes</h3>
-        <p>Detecta productos con stock bajo a tiempo.</p>
-    </div>
-    <div class="beneficio">
-        <div class="beneficio__icono">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="9" cy="20" r="1.4"/>
-            <circle cx="17" cy="20" r="1.4"/>
-            <path d="M2 3h3l2.2 11.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 7H6"/>
-          </svg>
-        </div>
-        <h3>Ventas más simples</h3>
-        <p>Registra tus ventas de manera rápida y sencilla.</p>
-    </div>
-    <div class="beneficio">
-        <div class="beneficio__icono">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 20V10"/>
-            <path d="M11 20V4"/>
-            <path d="M18 20v-7"/>
-          </svg>
-        </div>
-        <h3>Decisiones con datos</h3>
-        <p>Identifica productos de mayor y menor movimiento.</p>
-    </div>
-    <div class="beneficio">
-        <div class="beneficio__icono">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="9" cy="8" r="3.2"/>
-            <path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5"/>
-            <path d="M16 8.2a3 3 0 1 1 3.6 3"/>
-            <path d="M15.5 13.7c2.4.4 4.2 2.4 4.2 5.3"/>
-          </svg>
-        </div>
-        <h3>Clientes organizados</h3>
-        <p>Consulta información e historial de compras.</p>
-    </div>
-    <div class="beneficio">
-        <div class="beneficio__icono">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9"/>
-            <path d="M12 7v5l3.2 2"/>
-          </svg>
-        </div>
-        <h3>Más tiempo para tu negocio</h3>
-        <p>Reduce tareas manuales y mantén todo centralizado.</p>
-        </div>
-        </div>
-       </div>
-    </section>
+  </section>
 
-   <!-- PERSONA 3: Cómo Funciona  -->
+  <!-- SECCIÓN CÓMO FUNCIONA (Mejorada con un enfoque más dinámico) -->
   <section id="como-funciona">
     <div class="contenedor">
       <div class="como-funciona__encabezado">
-        <h2>Así de simple es tomar el control de tu tienda</h2>
-        <p>Simple, rápido y sin errores.</p>
+        <h2 data-i18n="comoFunciona.title">Empieza a optimizar tu local en solo 3 pasos</h2>
+        <p data-i18n="comoFunciona.subtitle">Una plataforma intuitiva creada especialmente para tenderos modernos.</p>
       </div>
       <div class="como-funciona__grid">
         <div class="paso">
           <div class="paso__numero">1</div>
-          <h3>Regístrate</h3>
-          <p>Crea tu cuenta en minutos y configura los datos de tu tienda.</p>
+          <h3 data-i18n="comoFunciona.p1_title">Regístrate</h3>
+          <p data-i18n="comoFunciona.p1_desc">Crea tu cuenta en minutos y configura los datos de tu tienda.</p>
         </div>
         <div class="paso">
           <div class="paso__numero">2</div>
-          <h3>Carga tu catálogo</h3>
-          <p>Registra tus productos y define tu stock mínimo.</p>
+          <h3 data-i18n="comoFunciona.p2_title">Carga tu catálogo</h3>
+          <p data-i18n="comoFunciona.p2_desc">Registra tus productos y define tu stock mínimo.</p>
         </div>
         <div class="paso">
           <div class="paso__numero">3</div>
-          <h3>Vende y controla tu inventario</h3>
-          <p>Registra tus ventas. El stock se actualiza solo.</p>
+          <h3 data-i18n="comoFunciona.p3_title">Vende y controla tu inventario</h3>
+          <p data-i18n="comoFunciona.p3_desc">Registra tus ventas. El stock se actualiza solo.</p>
         </div>
         <div class="paso">
           <div class="paso__numero">4</div>
-          <h3>Recibe alertas a tiempo</h3>
-          <p>Te avisamos antes de que algo se agote.</p>
+          <h3 data-i18n="comoFunciona.p4_title">Recibe alertas a tiempo</h3>
+          <p data-i18n="comoFunciona.p4_desc">Te avisamos antes de que algo se agote.</p>
         </div>
         <div class="paso">
           <div class="paso__numero">5</div>
-          <h3>Toma mejores decisiones</h3>
-          <p>Consulta tus reportes cuando los necesites.</p>
+          <h3 data-i18n="comoFunciona.p5_title">Toma mejores decisiones</h3>
+          <p data-i18n="comoFunciona.p5_desc">Consulta tus reportes cuando los necesites.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PERSONA 3: Precios -->
+  <!-- SECCIÓN PRECIOS -->
   <section id="precios">
     <div class="contenedor">
       <div class="precios__encabezado">
-        <h2>Un plan simple, pensado para tu tienda</h2>
-        <p>Todo incluido, siempre.</p>
+        <h2 data-i18n="precios.title">Un plan simple, pensado para tu tienda</h2>
+        <p data-i18n="precios.subtitle">Todo incluido, siempre.</p>
       </div>
       <div class="precios__card">
-        <p class="precios__monto">S/ 39.90<span>/ mes</span></p>
+        <p class="precios__monto">S/ 39.90<span data-i18n="precios.period">/ mes</span></p>
         <ul class="precios__lista">
-          <li>Gestión ilimitada de productos e inventario</li>
-          <li>Registro de ventas y compras</li>
-          <li>Alertas automáticas de stock mínimo</li>
-          <li>Cierre y cuadre de caja diario</li>
-          <li>Reportes y exportación en PDF</li>
-          <li>Soporte por correo electrónico</li>
+          <li data-i18n="precios.f1">Gestión ilimitada de productos e inventario</li>
+          <li data-i18n="precios.f2">Registro de ventas y compras</li>
+          <li data-i18n="precios.f3">Alertas automáticas de stock mínimo</li>
+          <li data-i18n="precios.f4">Cierre y cuadre de caja diario</li>
+          <li data-i18n="precios.f5">Reportes y exportación en PDF</li>
+          <li data-i18n="precios.f6">Soporte por correo electrónico</li>
         </ul>
-        <button class="precios__boton">Empieza gratis 14 días</button>
-        <p class="precios__nota">Sin tarjeta de crédito · Cancela cuando quieras</p>
+        <button class="precios__boton" data-i18n="precios.cta">Empieza gratis 14 días</button>
+        <p class="precios__nota" data-i18n="precios.note">Sin tarjeta de crédito · Cancela cuando quieras</p>
       </div>
     </div>
   </section>
 
-  <!-- PERSONA 4: Vistas Previas / Pantallas -->
+  <!-- SECCIÓN VISTAS PREVIAS -->
   <section id="vistas-previas">
     <div class="contenedor vistas-previas__contenido">
-
       <div class="vistas-previas__texto">
-        <h2>Información clara para actuar en el momento.</h2>
-        <p>Desde el Dashboard puedes revisar alertas, registrar ventas y consultar el estado de tu tienda sin saltar entre cuadernos.</p>
+        <h2 data-i18n="vistasPrevias.title">Información clara para actuar en el momento.</h2>
+        <p data-i18n="vistasPrevias.desc">Desde el Dashboard puedes revisar alertas, registrar ventas y consultar el estado de tu tienda sin saltar entre cuadernos.</p>
         <ul class="vistas-previas__lista">
-          <li>Acciones rápidas</li>
-          <li>Alertas de stock</li>
-          <li>Registro de ventas</li>
+          <li data-i18n="vistasPrevias.l1">Acciones rápidas</li>
+          <li data-i18n="vistasPrevias.l2">Alertas de stock</li>
+          <li data-i18n="vistasPrevias.l3">Registro de ventas</li>
         </ul>
       </div>
-
       <div class="vistas-previas__imagenes">
         <img class="imagen-flotante imagen-flotante--atras" src="assets/Stock.png" alt="Pantalla de productos con bajo stock en PetStock">
         <img class="imagen-flotante imagen-flotante--lado" src="assets/Proveedor.png" alt="Pantalla de selección de proveedor en PetStock">
         <img class="imagen-flotante imagen-flotante--frente" src="assets/Dashboard.png" alt="Pantalla principal del Dashboard en PetStock">
       </div>
-
     </div>
   </section>
 
- <!--faq-->
- <section id="faq">
+  <!-- SECCIÓN FAQ -->
+  <section id="faq">
     <div class="faq__contenedor">
-      <p class="faq__sobretitulo">PREGUNTAS FRECUENTES</p>
-      <h2 class="faq__titulo">Respuestas antes de empezar.</h2>
+      <p class="faq__sobretitulo" data-i18n="faq.tag">PREGUNTAS FRECUENTES</p>
+      <h2 class="faq__titulo" data-i18n="faq.title">Respuestas antes de empezar.</h2>
       
       <div class="faq__lista">
-        <!-- pregunta 1 -->
         <div class="faq__item">
           <div class="faq__pregunta-header">
-            <h3 class="faq__pregunta">¿PetStock funciona desde el celular?</h3>
+            <h3 class="faq__pregunta" data-i18n="faq.q1">¿PetStock funciona desde el celular?</h3>
             <span class="faq__icono">+</span>
           </div>
           <div class="faq__respuesta">
-            <p>Sí, PetStock es una plataforma web. Puedes acceder a tu cuenta desde el navegador de tu celular, tablet o computadora de forma cómoda y sin necesidad de instalar nada extra.</p>
+            <p data-i18n="faq.a1">Sí, PetStock es una plataforma web. Puedes acceder a tu cuenta desde el navegador de tu celular, tablet o computadora de forma cómoda y sin necesidad de instalar nada extra.</p>
           </div>
         </div>
 
-        <!-- pregunta 2 -->
         <div class="faq__item">
           <div class="faq__pregunta-header">
-            <h3 class="faq__pregunta">¿Puedo registrar productos con stock mínimo?</h3>
+            <h3 class="faq__pregunta" data-i18n="faq.q2">¿Puedo registrar productos con stock mínimo?</h3>
             <span class="faq__icono">+</span>
           </div>
           <div class="faq__respuesta">
-            <p>¡Por supuesto! Al registrar tus productos puedes definir un nivel de stock mínimo. El sistema te alertará a tiempo cuando las existencias bajen de ese límite para evitar que te quedes sin productos.</p>
+            <p data-i18n="faq.a2">¡Por supuesto! Al registrar tus productos puedes definir un nivel de stock mínimo. El sistema te alertará a tiempo cuando las existencias bajen de ese límite para evitar que te quedes sin productos.</p>
           </div>
         </div>
 
-        <!-- pregunta 3 -->
         <div class="faq__item">
           <div class="faq__pregunta-header">
-            <h3 class="faq__pregunta">¿Puedo revisar las compras de mis clientes?</h3>
+            <h3 class="faq__pregunta" data-i18n="faq.q3">¿Puedo revisar las compras de mis clientes?</h3>
             <span class="faq__icono">+</span>
           </div>
           <div class="faq__respuesta">
-            <p>Sí, PetStock guarda un historial completo de tus ventas. Podrás consultar la información de tus clientes y sus compras anteriores para mantener todo organizado y tomar decisiones con datos.</p>
+            <p data-i18n="faq.a3">Sí, PetStock guarda un historial completo de tus ventas. Podrás consultar la información de tus clientes y sus compras anteriores para mantener todo organizado y tomar decisiones con datos.</p>
           </div>
         </div>
 
-        <!-- pregunta 4 -->
         <div class="faq__item">
           <div class="faq__pregunta-header">
-            <h3 class="faq__pregunta">¿Necesito conocimientos técnicos para usar PetStock?</h3>
+            <h3 class="faq__pregunta" data-i18n="faq.q4">¿Necesito conocimientos técnicos para usar PetStock?</h3>
             <span class="faq__icono">+</span>
           </div>
           <div class="faq__respuesta">
-            <p>Para nada. Hemos diseñado la interfaz con colores claros y tipografías legibles para que administrar tu tienda sea muy intuitivo. Es la herramienta ideal para quienes buscan simplicidad en su día a día.</p>
+            <p data-i18n="faq.a4">Para nada. Hemos diseñado la interfaz con colores claros y tipografías legibles para que administrar tu tienda sea muy intuitivo. Es la herramienta ideal para quienes buscan simplicidad en su día a día.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
- <!--footer-->
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__contenedor">
-      
       <div class="footer__marca">
-        <h2 class="footer__logo">PetStock</h2>
-        <p class="footer__eslogan">Gestión simple para tiendas de mascotas.</p>
+        <h2 class="footer__logo" data-i18n="footer.brand">PetStock</h2>
+        <p class="footer__eslogan" data-i18n="footer.slogan">Gestión simple para tiendas de mascotas.</p>
       </div>
 
       <div class="footer__enlaces">
         <ul class="footer__lista">
-          <li><a href="#">Términos y condiciones</a></li>
-          <li><a href="#">Centro de ayuda</a></li>
+          <li><a href="#" data-i18n="footer.terms">Términos y condiciones</a></li>
+          <li><a href="#" data-i18n="footer.help">Centro de ayuda</a></li>
         </ul>
         <ul class="footer__lista">
-          <li><a href="#">Política de privacidad</a></li>
-          <li><a href="#">Correo</a></li>
+          <li><a href="#" data-i18n="footer.privacy">Política de privacidad</a></li>
+          <li><a href="#" data-i18n="footer.email">Correo</a></li>
         </ul>
       </div>
 
       <div class="footer__copyright">
-        <p>© 2026 PetStock</p>
+        <p data-i18n="footer.copyright">© 2026 PetStock</p>
       </div>
-
     </div>
   </footer>
 
+  <!-- SCRIPT DE ACORDEÓN PARA FAQ -->
   <script>
     const preguntas = document.querySelectorAll('.faq__pregunta-header');
     preguntas.forEach(pregunta => {
@@ -268,11 +283,13 @@
             item.classList.remove('activo');
           }
         });
-
         itemActivo.classList.toggle('activo');
       });
     });
   </script>
+
+  <!-- SCRIPT DE INTERNACIONALIZACIÓN (i18n) -->
+  <script src="assets/i18n/i18n.js"></script>
 
 </body>
 </html>
