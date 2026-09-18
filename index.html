@@ -17,53 +17,49 @@
   <!-- ELEMENTO DE ACCESIBILIDAD PARA EL LECTOR DE PANTALLA -->
   <div id="lang-announcer" role="status" aria-live="polite" class="visually-hidden"></div>
 
-  <!-- NAVBAR ESTILO MODERNO -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation" style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; background: rgba(47, 32, 25, 0.95); border-bottom: 1px solid rgba(255, 255, 255, 0.15);">
-
+  <!-- NAVBAR LIMPIO (SIN ESTILOS EN LÍNEA QUE GENEREN CAJAS FLOTANTES) -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
       <!-- Logo y nombre -->
-      <a href="#hero" class="nav-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.15em; text-transform: uppercase;">PetStock</span>
+      <a href="#hero" class="nav-logo">
+        <span>PetStock</span>
       </a>
 
       <!-- Enlaces centrales del Navbar con data-i18n -->
-      <div class="nav-collapse" style="display: flex; gap: 30px;">
-          <ul style="list-style: none; display: flex; gap: 28px; margin: 0; padding: 0;">
-              <li><a href="#beneficios" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px;" data-i18n="nav.beneficios">Beneficios</a></li>
-              <li><a href="#como-funciona" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px;" data-i18n="nav.comoFunciona">Cómo funciona</a></li>
-              <li><a href="#precios" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px;" data-i18n="nav.precios">Precios</a></li>
-              <li><a href="#faq" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px;" data-i18n="nav.faq">FAQ</a></li>
+      <div class="nav-collapse">
+          <ul>
+              <li><a href="#beneficios" data-i18n="nav.beneficios">Beneficios</a></li>
+              <li><a href="#como-funciona" data-i18n="nav.comoFunciona">Cómo funciona</a></li>
+              <li><a href="#precios" data-i18n="nav.precios">Precios</a></li>
+              <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
           </ul>
       </div>
 
-      <!-- Acciones derechas: Selector de idioma funcional y Botón Unirse -->
-      <div style="display: flex; align-items: center; gap: 14px;">
-          <!-- Botón de Idioma con los IDs exactos que lee i18n.js -->
+      <!-- Acciones derechas -->
+      <div class="nav-actions">
           <button
               class="lang-toggle"
               onclick="toggleLanguage()"
               aria-label="Switch to English"
               id="lang-toggle-btn"
-              style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1px solid rgba(255,255,255,0.4); border-radius: 999px; background: transparent; cursor: pointer; color: #fff;"
           >
-              <span class="lang-code" id="lang-code" aria-hidden="true" style="font-size: 12px; font-weight: 600;">ES</span>
-              <span class="lang-flag-pill" id="lang-flag" aria-hidden="true" style="font-size: 13px;">🇵🇪</span>
+              <span class="lang-code" id="lang-code" aria-hidden="true">ES</span>
+              <span class="lang-flag-pill" id="lang-flag" aria-hidden="true">🇵🇪</span>
           </button>
 
-          <!-- Botón de acción -->
-          <a href="#precios" class="btn-join" style="padding: 10px 18px; border-radius: 999px; background: #ED6B15; color: #fff; font-size: 12px; font-weight: 600; text-decoration: none;" data-i18n="nav.join">Unirse</a>
+          <a href="#precios" class="btn-join" data-i18n="nav.join">Unirse</a>
       </div>
   </nav>
 
   <!-- SECCIÓN HERO -->
-  <section id="hero" style="padding: 140px 2rem 80px 2rem; text-align: center; background-color: var(--color-fondo-alterno);">
+  <section id="hero" class="hero-section">
     <div class="contenedor">
-      <h2 style="font-size: var(--fs-h1); color: var(--color-texto); margin-bottom: 1rem;" data-i18n="hero.title">Controla tu tienda de mascotas sin enredos</h2>
-      <p style="font-size: 1.2rem; color: var(--color-texto-suave); max-width: 600px; margin: 0 auto 2rem;" data-i18n="hero.subtitle">El inventario, las ventas y las alertas de stock mínimo organizadas en un solo lugar de forma simple y rápida.</p>
-      <a href="#precios" style="display: inline-block; background-color: var(--color-primario); color: var(--color-blanco); padding: 14px 28px; border-radius: var(--radio-borde-chico); font-weight: 600; text-decoration: none;" data-i18n="hero.cta">Empieza gratis 14 días</a>
+      <h2 data-i18n="hero.title">Controla tu tienda de mascotas sin enredos</h2>
+      <p data-i18n="hero.subtitle">El inventario, las ventas y las alertas de stock mínimo organizadas en un solo lugar de forma simple y rápida.</p>
+      <a href="#precios" class="btn-hero-cta" data-i18n="hero.cta">Empieza gratis 14 días</a>
     </div>
   </section>
 
-  <!-- SECCIÓN BENEFICIOS (Mejorada con copys más comerciales) -->
+  <!-- SECCIÓN BENEFICIOS -->
   <section id="beneficios">
     <div class="contenedor">
       <div class="beneficios__encabezado">
@@ -117,7 +113,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN CÓMO FUNCIONA (Mejorada con un enfoque más dinámico) -->
+  <!-- SECCIÓN CÓMO FUNCIONA -->
   <section id="como-funciona">
     <div class="contenedor">
       <div class="como-funciona__encabezado">
