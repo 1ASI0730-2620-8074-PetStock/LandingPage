@@ -45,6 +45,11 @@
               <span class="lang-code" id="lang-code" aria-hidden="true">ES</span>
               <span class="lang-flag-pill" id="lang-flag" aria-hidden="true">🇵🇪</span>
           </button>
+          <a href="https://petstock-frontend.onrender.com/login"
+   class="btn-login"
+   target="_blank"
+   rel="noopener noreferrer"
+   data-i18n="nav.login">Iniciar sesión</a>
 
           <a href="#precios" class="btn-join" data-i18n="nav.join">Unirse</a>
       </div>
@@ -243,46 +248,192 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__contenedor">
-      <div class="footer__marca">
-        <h2 class="footer__logo" data-i18n="footer.brand">PetStock</h2>
-        <p class="footer__eslogan" data-i18n="footer.slogan">Gestión simple para tiendas de mascotas.</p>
-      </div>
+<!-- FOOTER -->
 
-      <div class="footer__enlaces">
-        <ul class="footer__lista">
-          <li><a href="#" data-i18n="footer.terms">Términos y condiciones</a></li>
-          <li><a href="#" data-i18n="footer.help">Centro de ayuda</a></li>
-        </ul>
-        <ul class="footer__lista">
-          <li><a href="#" data-i18n="footer.privacy">Política de privacidad</a></li>
-          <li><a href="#" data-i18n="footer.email">Correo</a></li>
-        </ul>
-      </div>
+<footer class="footer">
+  <div class="footer__contenedor">
 
-      <div class="footer__copyright">
-        <p data-i18n="footer.copyright">© 2026 PetStock</p>
-      </div>
-    </div>
-  </footer>
+<div class="footer__marca">
+  <h2 class="footer__logo" data-i18n="footer.brand">PetStock</h2>
+  <p class="footer__eslogan" data-i18n="footer.slogan">
+    Gestión simple para tiendas de mascotas.
+  </p>
+</div>
 
-  <!-- SCRIPT DE ACORDEÓN PARA FAQ -->
-  <script>
-    const preguntas = document.querySelectorAll('.faq__pregunta-header');
-    preguntas.forEach(pregunta => {
-      pregunta.addEventListener('click', () => {
-        const itemActivo = pregunta.parentElement;
-        document.querySelectorAll('.faq__item').forEach(item => {
-          if (item !== itemActivo) {
-            item.classList.remove('activo');
-          }
-        });
-        itemActivo.classList.toggle('activo');
+<div class="footer__enlaces">
+
+  <ul class="footer__lista">
+    <li>
+      <a href="#" onclick="abrirFooterModal('terminos'); return false;" data-i18n="footer.terms">
+        Términos y condiciones
+      </a>
+    </li>
+
+    <li>
+      <a href="#" onclick="abrirFooterModal('ayuda'); return false;" data-i18n="footer.help">
+        Centro de ayuda
+      </a>
+    </li>
+  </ul>
+
+  <ul class="footer__lista">
+    <li>
+      <a href="#" onclick="abrirFooterModal('privacidad'); return false;" data-i18n="footer.privacy">
+        Política de privacidad
+      </a>
+    </li>
+
+    <li>
+      <a href="#" onclick="abrirFooterModal('correo'); return false;" data-i18n="footer.email">
+        Correo
+      </a>
+    </li>
+  </ul>
+
+</div>
+
+<div class="footer__copyright">
+  <p data-i18n="footer.copyright">© 2026 PetStock</p>
+</div>
+
+  </div>
+</footer>
+
+
+<div id="footerModal" class="footer-modal">
+  <div class="footer-modal__contenido">
+
+<button class="footer-modal__cerrar" onclick="cerrarFooterModal()">
+  &times;
+</button>
+
+<h2 id="footerModalTitulo"></h2>
+
+<div id="footerModalTexto"></div>
+
+  </div>
+</div>
+
+<script>
+  const preguntas = document.querySelectorAll('.faq__pregunta-header');
+
+  preguntas.forEach(pregunta => {
+    pregunta.addEventListener('click', () => {
+
+      const itemActivo = pregunta.parentElement;
+
+      document.querySelectorAll('.faq__item').forEach(item => {
+        if (item !== itemActivo) {
+          item.classList.remove('activo');
+        }
       });
+
+      itemActivo.classList.toggle('activo');
     });
-  </script>
+  });
+
+
+  const footerContenido = {
+
+    terminos: {
+      titulo: "Términos y condiciones",
+      texto: `
+        <p>Bienvenido a PetStock. Estos términos establecen las condiciones 
+        para utilizar nuestra plataforma especializada en la gestión integral de tiendas de mascotas, clínicas veterinarias y centros de grooming.</p>
+        
+        <p>El usuario se compromete a utilizar PetStock de manera responsable, garantizando la veracidad de su inventario y el cumplimiento de las normativas legales locales relacionadas con la venta de alimentos, medicinas y accesorios para animales.</p>
+        
+        <p>El uso del sistema implica la aceptación de nuestras políticas de facturación y servicio. La información de esta sección puede ser modificada periódicamente para adaptarse a nuevas actualizaciones del software.</p>
+      `
+    },
+  
+    ayuda: {
+      titulo: "Centro de ayuda",
+      texto: `
+        <p>¿Necesitas ayuda para potenciar tu negocio con PetStock?</p>
+        
+        <p>Aquí podrás encontrar tutoriales detallados sobre cómo registrar nuevos productos (códigos de barras, fechas de caducidad), administrar el stock en tiempo real, emitir comprobantes de ventas y gestionar la agenda de citas para mascotas.</p>
+        
+        <p>Si tienes algún inconveniente técnico con tu punto de venta o reportes, puedes generar un ticket de atención con nuestro equipo de soporte.</p>
+        
+        <p><strong>Horario de atención:</strong> Lunes a viernes de 9:00 a.m. a 6:00 p.m. (Soporte prioritario para cuentas Premium).</p>
+      `
+    },
+  
+    privacidad: {
+      titulo: "Política de privacidad",
+      texto: `
+        <p>En PetStock nos tomamos muy en serio la seguridad de la información comercial de tu tienda y los datos personales de tus clientes.</p>
+        
+        <p>Toda la información registrada en la plataforma (historiales de compras, perfiles de mascotas, datos de proveedores y métricas de ventas) viaja de forma encriptada y se utiliza exclusivamente para el correcto funcionamiento y mejora de la herramienta.</p>
+        
+        <p>PetStock garantiza que nunca compartirá ni venderá tu base de datos a terceros. Esta política cumple con los estándares actuales de protección de datos.</p>
+      `
+    },
+  
+    correo: {
+      titulo: "Contacto",
+      texto: `
+        <p>Si tienes alguna consulta comercial, sugerencias para nuevas funcionalidades o necesitas asistencia con la implementación en tu local, comunícate con nosotros.</p>
+        
+        <p><strong>Correo electrónico:</strong> 
+        soporte@petstock.com</p>
+
+        <p><strong>Teléfono / WhatsApp:</strong> 
+        +51 999 999 999</p>
+        
+      `
+      
+    }
+  
+  };
+
+
+  function abrirFooterModal(tipo) {
+
+    const modal = document.getElementById("footerModal");
+    const titulo = document.getElementById("footerModalTitulo");
+    const texto = document.getElementById("footerModalTexto");
+
+    const contenido = footerContenido[tipo];
+
+    if (!contenido) return;
+
+    titulo.textContent = contenido.titulo;
+    texto.innerHTML = contenido.texto;
+
+    modal.classList.add("footer-modal--activo");
+
+    document.body.style.overflow = "hidden";
+  }
+
+
+  function cerrarFooterModal() {
+
+    const modal = document.getElementById("footerModal");
+
+    modal.classList.remove("footer-modal--activo");
+
+    document.body.style.overflow = "";
+  }
+
+  document.getElementById("footerModal").addEventListener("click", function(event) {
+
+    if (event.target === this) {
+      cerrarFooterModal();
+    }
+
+  });
+
+
+  document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+      cerrarFooterModal();
+    }
+
+  });
+</script>
 
   <!-- SCRIPT DE INTERNACIONALIZACIÓN (i18n) -->
   <script src="assets/i18n/i18n.js"></script>
