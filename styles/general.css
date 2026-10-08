@@ -263,6 +263,22 @@ p {
   background: #C6560E;
 }
 
+.btn-login {
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-login:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 /* ==========================================================================
    ESTILOS DE LA SECCIÓN HERO
    ========================================================================== */
